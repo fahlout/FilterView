@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/fahlout/Resources/master/FilterView/FilterViewHeader.png" alt="FilterViewHeader">
+<img src="https://raw.githubusercontent.com/fahlout/Resources/master/FilterView/FilterViewHeader2.png" alt="FilterViewHeader">
 ========
 
 ## Description ##

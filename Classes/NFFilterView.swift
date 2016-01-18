@@ -84,6 +84,7 @@ class NFFilterView: UITableViewController {
     
     func resetFilters() {
         selectedFilters = [:]
+        filteredObjects = filterObjects.map() { $0 }
         generateDefaultSelections()
         generateFilters(filterObjects)
         tableView.reloadData()

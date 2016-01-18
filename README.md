@@ -33,6 +33,10 @@ The class files required for FilterView are located in the Classes folder in the
 
 Please let me know if your app in the AppStore uses this library so I can add your app to the list of apps featuring FilterView.
 
+## Credits
+
+[Niklas Fahl (fahlout)](http://bit.ly/fahlout) - iOS Developer ([LinkedIn](http://bit.ly/linked-in-niklas-fahl))
+
 ## License ##
 
 The MIT License (MIT)

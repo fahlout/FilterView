@@ -12,8 +12,10 @@
 		9ED85D4A1C4DA957004DCF5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ED85D481C4DA957004DCF5D /* LaunchScreen.storyboard */; };
 		9ED85D551C4DA957004DCF5D /* FilterViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED85D541C4DA957004DCF5D /* FilterViewDemoTests.swift */; };
 		9ED85D601C4DA957004DCF5D /* FilterViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED85D5F1C4DA957004DCF5D /* FilterViewDemoUITests.swift */; };
-		9ED85D741C4DAA5C004DCF5D /* NFFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED85D721C4DAA5C004DCF5D /* NFFilterController.swift */; };
-		9ED85D751C4DAA5C004DCF5D /* NFFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED85D731C4DAA5C004DCF5D /* NFFilterTableViewCell.swift */; };
+		9ED85D741C4DAA5C004DCF5D /* NFFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED85D721C4DAA5C004DCF5D /* NFFilterView.swift */; };
+		9ED85D751C4DAA5C004DCF5D /* NFFilterViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED85D731C4DAA5C004DCF5D /* NFFilterViewTableViewCell.swift */; };
+		9ED85D781C4DAAE0004DCF5D /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED85D761C4DAAE0004DCF5D /* DemoTableViewController.swift */; };
+		9ED85D791C4DAAE0004DCF5D /* DemoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED85D771C4DAAE0004DCF5D /* DemoTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +47,10 @@
 		9ED85D5B1C4DA957004DCF5D /* FilterViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilterViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED85D5F1C4DA957004DCF5D /* FilterViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewDemoUITests.swift; sourceTree = "<group>"; };
 		9ED85D611C4DA957004DCF5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9ED85D721C4DAA5C004DCF5D /* NFFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NFFilterController.swift; path = ../../Classes/NFFilterController.swift; sourceTree = "<group>"; };
-		9ED85D731C4DAA5C004DCF5D /* NFFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NFFilterTableViewCell.swift; path = ../../Classes/NFFilterTableViewCell.swift; sourceTree = "<group>"; };
+		9ED85D721C4DAA5C004DCF5D /* NFFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NFFilterView.swift; path = ../../Classes/NFFilterView.swift; sourceTree = "<group>"; };
+		9ED85D731C4DAA5C004DCF5D /* NFFilterViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NFFilterViewTableViewCell.swift; path = ../../Classes/NFFilterViewTableViewCell.swift; sourceTree = "<group>"; };
+		9ED85D761C4DAAE0004DCF5D /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
+		9ED85D771C4DAAE0004DCF5D /* DemoTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		9ED85D3E1C4DA957004DCF5D /* FilterViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9ED85D6D1C4DA9F4004DCF5D /* FilterView-Swift */,
 				9ED85D3F1C4DA957004DCF5D /* AppDelegate.swift */,
+				9ED85D761C4DAAE0004DCF5D /* DemoTableViewController.swift */,
+				9ED85D771C4DAAE0004DCF5D /* DemoTableViewController.xib */,
+				9ED85D6D1C4DA9F4004DCF5D /* FilterView-Swift */,
 				9ED85D461C4DA957004DCF5D /* Assets.xcassets */,
 				9ED85D481C4DA957004DCF5D /* LaunchScreen.storyboard */,
 				9ED85D4B1C4DA957004DCF5D /* Info.plist */,
@@ -127,8 +133,8 @@
 		9ED85D6D1C4DA9F4004DCF5D /* FilterView-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				9ED85D721C4DAA5C004DCF5D /* NFFilterController.swift */,
-				9ED85D731C4DAA5C004DCF5D /* NFFilterTableViewCell.swift */,
+				9ED85D721C4DAA5C004DCF5D /* NFFilterView.swift */,
+				9ED85D731C4DAA5C004DCF5D /* NFFilterViewTableViewCell.swift */,
 			);
 			name = "FilterView-Swift";
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ED85D4A1C4DA957004DCF5D /* LaunchScreen.storyboard in Resources */,
+				9ED85D791C4DAAE0004DCF5D /* DemoTableViewController.xib in Resources */,
 				9ED85D471C4DA957004DCF5D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,9 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED85D781C4DAAE0004DCF5D /* DemoTableViewController.swift in Sources */,
 				9ED85D401C4DA957004DCF5D /* AppDelegate.swift in Sources */,
-				9ED85D751C4DAA5C004DCF5D /* NFFilterTableViewCell.swift in Sources */,
-				9ED85D741C4DAA5C004DCF5D /* NFFilterController.swift in Sources */,
+				9ED85D751C4DAA5C004DCF5D /* NFFilterViewTableViewCell.swift in Sources */,
+				9ED85D741C4DAA5C004DCF5D /* NFFilterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

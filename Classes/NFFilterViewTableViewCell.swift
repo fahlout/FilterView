@@ -1,14 +1,13 @@
 //
-//  NFFilterTableViewCell.swift
+//  NFFilterViewTableViewCell.swift
 //  
-//
 //  Created by Niklas Fahl on 1/15/16.
 //  Copyright © 2016 Niklas Fahl. All rights reserved.
 //
 
 import UIKit
 
-class NFFilterTableViewCell: UITableViewCell {
+class NFFilterViewTableViewCell: UITableViewCell {
 
     var filterKey = ""
     var filterValue = ""

@@ -1,5 +1,5 @@
 //
-//  NFFilterController.swift
+//  NFFilterView.swift
 //
 //  Created by Niklas Fahl on 1/15/16.
 //  Copyright © 2016 Niklas Fahl. All rights reserved.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NFFilterController: UITableViewController {
+class NFFilterView: UITableViewController {
 
     var filterObjects: [AnyObject] = []
     var filteredObjects: [AnyObject] = []
@@ -55,7 +55,7 @@ class NFFilterController: UITableViewController {
     
     // Table View
     func configureTableView() {
-        tableView.registerClass(NFFilterTableViewCell.self, forCellReuseIdentifier: "NFFilterTableViewCell")
+        tableView.registerClass(NFFilterViewTableViewCell.self, forCellReuseIdentifier: "NFFilterViewTableViewCell")
     }
     
     // Bar buttons
@@ -184,7 +184,7 @@ class NFFilterController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NFFilterTableViewCell", forIndexPath: indexPath) as! NFFilterTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("NFFilterViewTableViewCell", forIndexPath: indexPath) as! NFFilterViewTableViewCell
 
         // Get values to configure cell
         let propertyNameInSection = filterProperties[indexPath.section]
@@ -205,7 +205,7 @@ class NFFilterController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell: NFFilterTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as! NFFilterTableViewCell
+        let cell: NFFilterViewTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as! NFFilterViewTableViewCell
         
         // Make sure user cannot deselect "All" only select it when it's appropriate
         if indexPath.row > 0 {

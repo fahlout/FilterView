@@ -5,6 +5,34 @@
 
 This library is designed to let you easily present a controller for the user to select filters based on an array of objects and the given properties to be filtered on.
 
+## Installation
+
+**CocoaPods**
+
+Coming soon.
+
+**Carthage**
+
+Coming soon.
+
+**Manual Installation**
+
+The class files required for FilterView are located in the Classes folder in the root of this repository as listed below:
+
+* *.swift
+
+## How to use PageMenu
+
+
+
+## Customization
+
+
+
+## Apps using FilterView
+
+Please let me know if your app in the AppStore uses this library so I can add your app to the list of apps featuring FilterView.
+
 ## License ##
 
 The MIT License (MIT)

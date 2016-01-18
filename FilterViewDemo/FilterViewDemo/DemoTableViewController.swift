@@ -10,15 +10,16 @@ import UIKit
 
 class TestObject: NSObject {
     var name: String = ""
-    var category: String = ""
-    var count: Int = 0
+    var job: String = ""
+    var age: Int = 0
 }
 
 class DemoTableViewController: UITableViewController {
     
     let testNames = ["Dietrich", "Hans", "Helmut", "Manni", "Arnold", "William"]
-    let testCategories = ["Music", "Cars", "Landscaping", "Restaurants", "Books", "Clubs & Bars"]
-    let testCounts = [60, 54, 13, 7, 99, 28]
+    let testJobs = ["Music", "Cars", "Landscaping", "Restaurants", "Books", "Clubs & Bars"]
+    let testAges = [60, 54, 13, 7, 99, 28]
+    
     var testObjects: [TestObject] = []
     var filteredObjects: [TestObject] = []
     
@@ -45,20 +46,20 @@ class DemoTableViewController: UITableViewController {
         // Test input
         for var i = 0; i < 12; i++ {
             let nameIndex = Int(arc4random_uniform(5) + 1)
-            let categoryIndex = Int(arc4random_uniform(5) + 1)
-            let countIndex = Int(arc4random_uniform(5) + 1)
+            let jobIndex = Int(arc4random_uniform(5) + 1)
+            let ageIndex = Int(arc4random_uniform(5) + 1)
             
             let newObject = TestObject()
             newObject.name = testNames[nameIndex]
-            newObject.category = testCategories[categoryIndex]
-            newObject.count = testCounts[countIndex]
+            newObject.job = testJobs[jobIndex]
+            newObject.age = testAges[ageIndex]
             testObjects.append(newObject)
         }
     }
     
     func openNFFilterController() {
         // Initialize NFFilterController
-        let filterController = NFFilterView(objects: testObjects, properties: ["name", "category", "count"])
+        let filterController = NFFilterView(objects: testObjects, properties: ["name", "job", "age"])
         
         // Show NFFilterController
         filterController.show(self.navigationController!)
@@ -79,7 +80,7 @@ class DemoTableViewController: UITableViewController {
 
         // Configure the cell...
         let testObject = filteredObjects[indexPath.row]
-        cell.textLabel?.text = "\(testObject.name) | \(testObject.category) | \(testObject.count)"
+        cell.textLabel?.text = "\(testObject.name) | \(testObject.job) | \(testObject.age)"
 
         return cell
     }

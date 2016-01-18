@@ -24,6 +24,7 @@ class NFFilterView: UITableViewController {
         super.init(style: .Grouped)
         
         filterObjects = objects
+        filteredObjects = objects
         filterProperties = properties
     }
 
@@ -219,7 +220,7 @@ class NFFilterView: UITableViewController {
                 selectedFilters[cell.filterKey] = filters[cell.filterKey]
                 
                 // Filter by new selection
-                filteredObjects = filterObjects.filter() { convertToString($0.valueForKey(propertyName)) == filterByName}
+                filteredObjects = filteredObjects.filter() { convertToString($0.valueForKey(propertyName)) == filterByName}
             } else {
                 cell.accessoryType = .None
                 selectedFilters.removeValueForKey(cell.filterKey)

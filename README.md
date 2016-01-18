@@ -3,6 +3,8 @@
 
 ## Description ##
 
+This library is designed to let you easily present a controller for the user to select filters based on an array of objects and the given properties to be filtered on.
+
 ## License ##
 
 The MIT License (MIT)

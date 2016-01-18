@@ -23,11 +23,11 @@ The class files required for FilterView are located in the Classes folder in the
 
 ## How to use PageMenu
 
-
+Coming soon.
 
 ## Customization
 
-
+Coming soon.
 
 ## Apps using FilterView
 

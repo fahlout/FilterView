@@ -23,6 +23,8 @@ class DemoTableViewController: UITableViewController {
     var testObjects: [TestObject] = []
     var filteredObjects: [TestObject] = []
     
+    var filterView: NFFilterView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,11 +37,19 @@ class DemoTableViewController: UITableViewController {
         
         generateRandomArray()
         filteredObjects = testObjects
+        addObserverForFilterUpdates()
+        
+        // Initialize NFFilterController
+        filterView = NFFilterView(objects: testObjects, properties: ["name", "job", "age"])
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addObserverForFilterUpdates() {
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: "filteredObjectsDidUpdate:", name: "filteredObjectsDidUpdate", object: nil)
     }
     
     func generateRandomArray() {
@@ -58,11 +68,15 @@ class DemoTableViewController: UITableViewController {
     }
     
     func openNFFilterController() {
-        // Initialize NFFilterController
-        let filterController = NFFilterView(objects: testObjects, properties: ["name", "job", "age"])
-        
         // Show NFFilterController
-        filterController.show(self.navigationController!)
+        filterView!.show(self.navigationController!)
+    }
+    
+    // MARK: - Handle update notification
+    
+    func filteredObjectsDidUpdate(notification: NSNotification) {
+        filteredObjects = notification.userInfo!["filteredObjects"] as! [TestObject]
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source

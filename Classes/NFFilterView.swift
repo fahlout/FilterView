@@ -75,6 +75,12 @@ class NFFilterView: UITableViewController {
         self.navigationItem.leftBarButtonItem = resetButton
     }
     
+    // NSNotification for filtered object changes
+    
+    func sendNotificationForUpdates() {
+        NSNotificationCenter.defaultCenter().postNotificationName("filteredObjectsDidUpdate", object: self, userInfo: ["filteredObjects": filteredObjects])
+    }
+    
     // MARK: - Close/Reset Filter Controller
     
     func closeFilterController() {
@@ -252,6 +258,8 @@ class NFFilterView: UITableViewController {
                 tableView.reloadData()
             }
         }
+        
+        sendNotificationForUpdates()
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
